@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DictionaryAppDemo">
         <activity
-            android:name=".DetailActivity"
+            android:name=".activity.DetailActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
