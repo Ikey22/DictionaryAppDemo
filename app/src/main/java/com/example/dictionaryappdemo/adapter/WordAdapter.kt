@@ -1,6 +1,7 @@
 package com.example.dictionaryappdemo.adapter
 
 import android.content.Context
+import android.net.Uri
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import android.widget.Button
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dictionaryappdemo.R
+import com.example.dictionaryappdemo.activity.DetailActivity
 
 /**
  * Adapter for the [RecyclerView] in [DetailActivity].
@@ -67,6 +69,10 @@ class WordAdapter(private val letterId: String, context: Context) :
 
         // Set the text of the WordViewHolder
         holder.button.text = item
+
+        holder.button.setOnClickListener {
+            val queryUrl: Uri = Uri.parse("${DetailActivity.SEARCH_PREFIX}${item}")
+        }
 
     }
     // Setup custom accessibility delegate to set the text read with
